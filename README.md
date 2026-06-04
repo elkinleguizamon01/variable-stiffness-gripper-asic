@@ -2,13 +2,14 @@
 
 <div align="center">
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Verilog](https://img.shields.io/badge/Verilog-HDL-blue)](https://en.wikipedia.org/wiki/Verilog)
 [![TinyTapeout](https://img.shields.io/badge/TinyTapeout-SKY130-orange)](https://tinytapeout.com/)
 [![OpenLane](https://img.shields.io/badge/OpenLane-ASIC_Flow-green)](https://github.com/The-OpenROAD-Project/OpenLane)
 [![Simulation](https://img.shields.io/badge/Simulation-Icarus_Verilog-blueviolet)](http://iverilog.icarus.com/)
 [![PDK](https://img.shields.io/badge/PDK-SkyWater_SKY130-red)](https://github.com/google/skywater-pdk)
 
-*Electiva II · Ingeniería Electrónica sede tunja · Universidad Pedagogica y Tecnologica Colombia*
+*Electiva II · Ingeniería Electrónica · Universidad Pedagógica y Tecnológica de Colombia*
 
 </div>
 
@@ -30,6 +31,7 @@
 - [Design Flow](#-design-flow)
 - [Verification & Results](#-verification--results)
 - [ASIC Physical Design](#-asic-physical-design)
+- [Technical Paper](#-technical-paper)
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
@@ -289,6 +291,67 @@ RTL Design (Verilog)
 
 ---
 
+## 📄 Technical Paper
+
+> 📥 **Full document:** [`docs/informe_electiva_2.pdf`](./docs/informe_electiva_2.pdf)
+
+This repository accompanies the IEEE-format technical article submitted for the Elective II course. The paper covers the complete RTL-to-GDSII flow and experimental validation of the system.
+
+### Authors
+
+| Name | Affiliation | Contact |
+|------|------------|---------|
+| **Elkin Felipe Leguizamón Martínez** | Ingeniería Electrónica, UPTC — Tunja, Boyacá, Colombia | elkin.leguizamon01@uptc.edu.co |
+| **Juan Pablo Briceño** | Ingeniería Electrónica, UPTC — Tunja, Boyacá, Colombia | juan.briceno@uptc.edu.co |
+
+### Abstract
+
+> This article presents the design and validation of a digital control system for a variable-stiffness mini gripper, developed following the digital design flow studied in the Elective II course of Electronic Engineering. The system was described in Verilog HDL and verified through functional simulations, as well as through physical validation tests using an FPGA as a prototyping platform.
+>
+> The proposal seeks to provide a control mechanism capable of adjusting the gripper's stiffness levels, allowing the gripping force to be adapted according to the characteristics of the manipulated object. A digital architecture was developed oriented toward control signal generation and the management of different system operating states. The design was implemented following an ASIC-compatible development flow using open-source EDA tools for the stages of logic synthesis, placement, and routing.
+>
+> Design Rule Check (DRC) and Layout Versus Schematic (LVS) verifications were also carried out, obtaining satisfactory results that demonstrate the technical feasibility of the proposal. Currently, the project is in the validation and pre-fabrication optimization phase. As future work, integration of the design into the Tiny Tapeout fabrication flow using 130 nm SkyWater SKY130 technology is contemplated, with the goal of obtaining a physical silicon implementation.
+
+### Development Methodology (Work Packages)
+
+The project was organized into eight work packages (WP):
+
+| WP | Stage | Key Deliverables |
+|----|-------|-----------------|
+| WP1 | Requirements & Architecture | Requirements doc, block diagrams |
+| WP2 | RTL Design in Verilog HDL | Source code, RTL diagrams, module docs |
+| WP3 | Functional Verification | Testbenches, simulation results, validation reports |
+| WP4 | Synthesis & STA | Synthesized netlist, utilization & timing reports |
+| WP5 | ASIC Physical Design | Physical layout, GDSII, area & power reports |
+| WP6 | Physical Verification (DRC/LVS) | DRC report, LVS report, manufacturability evaluation |
+| WP7 | FPGA Implementation & Validation | Bitstream, experimental results, hardware validation |
+| WP8 | Documentation & Presentation | GitHub repository, IEEE article, final presentation |
+
+### Key Conclusions from the Paper
+
+1. The digital system for variable-stiffness mini gripper control was successfully developed in Verilog HDL following course methodologies.
+2. The architecture was validated via functional simulation and FPGA prototyping before physical implementation.
+3. The complete ASIC flow was executed using open-source EDA tools, including synthesis, STA, floorplanning, placement, CTS, routing, and physical verification.
+4. The SkyWater SKY130 PDK and OpenLane flow enabled generation of the chip physical layout with all files required for 130 nm CMOS fabrication.
+5. DRC and LVS verifications confirmed consistency and technological compatibility with the SKY130 process.
+6. Although the circuit has not yet been submitted to fabrication via Tiny Tapeout, the project establishes a solid foundation for future MPW participation.
+
+### References
+
+| # | Reference |
+|---|-----------|
+| [1] | Tiny Tapeout — https://tinytapeout.com |
+| [2] | SkyWater SKY130 Open Source PDK — https://github.com/google/skywater-pdk |
+| [3] | M. Shalan & T. Edwards, "OpenLane: The open-source digital ASIC implementation flow," OSDA 2020 |
+| [4] | P. P. Acarnley, *Stepping Motors: A Guide to Theory and Practice*, 4th ed., IET, 2002 |
+| [5] | B. Vanderborght et al., "Variable impedance actuators: A review," *Robot. Auton. Syst.*, vol. 61, 2013 |
+| [6] | S. Wolf et al., "Variable stiffness actuators: Review on design and components," *IEEE/ASME Trans. Mechatronics*, vol. 21, 2016 |
+| [7] | A. Bicchi & V. Kumar, "Robotic grasping and contact: A review," *IEEE ICRA*, 2000 |
+| [8] | C. Wolf, "Yosys Open SYnthesis Suite" — https://yosyshq.net/yosys/ |
+| [9] | J. Ousterhout, "Magic: A VLSI layout system," *DAC*, 1984 |
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -311,7 +374,8 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ## 🙏 Acknowledgments
 
-- **UPTC** — Universidad Pedagógica y Tecnológica de Colombia, Escuela de Ingeniería Electrónica
+- **UPTC** — Universidad Pedagógica y Tecnológica de Colombia, Departamento de Ingeniería Electrónica y Laboratorio de Robótica y Electrónica
+- **Prof. Juan David Balaguera** — for guidance and mentorship throughout the project
 - **Tiny Tapeout** — for democratizing ASIC fabrication: [tinytapeout.com](https://tinytapeout.com)
 - **Google + SkyWater** — for the open-source SKY130 PDK
 - **The OpenROAD Project** — for open-source physical design tools
