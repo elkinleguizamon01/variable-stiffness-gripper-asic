@@ -2,14 +2,13 @@
 
 <div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Verilog](https://img.shields.io/badge/Verilog-HDL-blue)](https://en.wikipedia.org/wiki/Verilog)
 [![TinyTapeout](https://img.shields.io/badge/TinyTapeout-SKY130-orange)](https://tinytapeout.com/)
 [![OpenLane](https://img.shields.io/badge/OpenLane-ASIC_Flow-green)](https://github.com/The-OpenROAD-Project/OpenLane)
 [![Simulation](https://img.shields.io/badge/Simulation-Icarus_Verilog-blueviolet)](http://iverilog.icarus.com/)
 [![PDK](https://img.shields.io/badge/PDK-SkyWater_SKY130-red)](https://github.com/google/skywater-pdk)
 
-*Electiva II · Ingeniería Electrónica · UPTC*
+*Electiva II · Ingeniería Electrónica sede tunja · Universidad Pedagogica y Tecnologica Colombia*
 
 </div>
 
