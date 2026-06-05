@@ -77,21 +77,21 @@ The system was described in **Verilog HDL**, verified through functional RTL sim
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                   TOP-LEVEL MODULE                       │
+│                   TOP-LEVEL MODULE                      │
 │                                                         │
 │  ┌──────────────┐    ┌─────────────┐    ┌────────────┐  │
-│  │  Config I/F  │───▶│     FSM     │───▶│  Output    │  │
+│  │  Config I/F  │───▶│     FSM     │───▶│  Output   │  │
 │  │  (Digital)   │    │ (State Mgr) │    │  Driver    │  │
 │  └──────────────┘    └──────┬──────┘    └─────┬──────┘  │
-│                             │                 │          │
-│                    ┌────────▼────────┐        │          │
-│                    │  Stiffness Ctrl │        │          │
-│                    │   (N Levels)    │        │          │
-│                    └─────────────────┘        │          │
-│                                               ▼          │
+│                             │                 │         │
+│                    ┌────────▼────────┐        │         │
+│                    │  Stiffness Ctrl │        │         │
+│                    │   (N Levels)    │        │         │
+│                    └─────────────────┘        │         │
+│                                               ▼         │
 │                                      ┌───────────────┐  │
-│                                      │  Mini Gripper  │  │
-│                                      │   Interface    │  │
+│                                      │  Mini Gripper │  │
+│                                      │   Interface   │  │
 │                                      └───────────────┘  │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -224,20 +224,20 @@ RTL Design (Verilog)
  (OpenROAD / OpenSTA)                        │
         │                                    │
         ▼                                    │
- Floorplanning & Power Planning               │
+ Floorplanning & Power Planning              │
  (OpenROAD)                                  │
         │                                    │
         ▼                                    │
- Placement & Clock Tree Synthesis (CTS)       │
+ Placement & Clock Tree Synthesis (CTS)      │
  (OpenROAD)                                  │
         │                                    │
         ▼                                    │
- Routing (OpenROAD)                           │
+ Routing (OpenROAD)                          │
         │                                    │
         ▼                                    │
- Physical Verification                        │
- ├── DRC (Magic)        ✅                    │
- └── LVS (Netgen)       ✅                    │
+ Physical Verification                       │
+ ├── DRC (Magic)        ✅                   │
+ └── LVS (Netgen)       ✅                   │
         │                                    │
         ▼                                    │
  GDSII Export  ──────────────────────────────┘
@@ -350,19 +350,6 @@ The project was organized into eight work packages (WP):
 | [8] | C. Wolf, "Yosys Open SYnthesis Suite" — https://yosyshq.net/yosys/ |
 | [9] | J. Ousterhout, "Magic: A VLSI layout system," *DAC*, 1984 |
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature/your-feature`.
-3. Commit your changes: `git commit -m 'feat: add your feature'`.
-4. Push to the branch: `git push origin feature/your-feature`.
-5. Open a Pull Request describing your changes.
-
-Please ensure all RTL changes are accompanied by updated testbenches and that simulations pass before submitting.
 
 ---
 
